@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/search_terms_generator.h
+cstdint
+-
+cassert
+-
+iostream
+-
+fstream
+-
+map
+-
+string
+-
+
+/Users/anuragk/Work/Succinct/succinct-qgen/src/search_terms_generator.cc
+search_terms_generator.h
+/Users/anuragk/Work/Succinct/succinct-qgen/src/search_terms_generator.h
+unistd.h
+-
+
