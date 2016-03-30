@@ -32,6 +32,8 @@ class SearchTermsGenerator {
     while (std::getline(in, line)) {
       if (line.length() < term_length_)
         continue;
+
+#pragma omp parallel for
       for (uint64_t i = 0; i <= line.length() - term_length_; i++) {
         std::string term = line.substr(i, term_length_);
         assert(term.length() == term_length_);
