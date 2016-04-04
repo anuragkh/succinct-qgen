@@ -15,12 +15,7 @@ else()
 endif()
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -g")
 
-find_package(OpenMP)
-if (OPENMP_FOUND)
-    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
-    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
-endif()
-
 set(INCLUDE include)
 include_directories(${INCLUDE})
 add_executable(qgen src/search_terms_generator.cc)
+add_executable(cqgen src/col_search_terms_generator.cc)
